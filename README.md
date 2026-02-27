@@ -1,1 +1,1 @@
-# -tclassic-lighting
+# Tclassic-lighting
