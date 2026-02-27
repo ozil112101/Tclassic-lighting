@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>T.Classic Lighting</title>
+
+<style>
+/* PAGE */
+body{
+    margin:0;
+    font-family:Arial, sans-serif;
+    background:#0f172a;
+    color:white;
+}
+
+/* NAVBAR */
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 40px;
+    background:#020617;
+    position:sticky;
+    top:0;
+    z-index:10;
+}
+
+nav h2{
+    color:cyan;
+    margin:0;
+}
+
+/* HERO SECTION */
+.hero{
+    text-align:center;
+    min-height:80vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    padding:40px;
+    background-color:#0f172a; /* fallback dark color */
+    color:white;
+}
+
+.hero h1{
+    font-size:48px;
+    margin-bottom:10px;
+}
+
+.hero p{
+    font-size:18px;
+    max-width:600px;
+}
+
+.btn{
+    margin-top:20px;
+    background:cyan;
+    padding:14px 28px;
+    border-radius:25px;
+    text-decoration:none;
+    color:black;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.btn:hover{
+    background:white;
+}
+
+/* PRODUCTS */
+.products{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    text-align:center;
+    padding:60px 20px;
+}
+
+.products h2{
+    width:100%;
+    margin-bottom:30px;
+}
+
+.box{
+    flex:0 0 260px;
+    background:#020617;
+    margin:15px;
+    padding:20px;
+    border-radius:10px;
+    transition:0.3s;
+}
+
+.box:hover{
+    transform:translateY(-8px);
+    box-shadow:0 0 20px cyan;
+}
+
+.box img{
+    width:100%;
+    border-radius:10px;
+}
+
+/* ABOUT US */
+.about{
+    padding:60px 20px;
+    text-align:center;
+    background:#111827;
+    color:white;
+}
+
+/* CONTACT US */
+.contact{
+    padding:60px 20px;
+    text-align:center;
+    background:#020617;
+    color:white;
+}
+
+/* FOOTER */
+footer{
+    text-align:center;
+    padding:20px;
+    background:#020617;
+    margin-top:40px;
+}
+
+/* WHATSAPP BUTTON */
+.whatsapp{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    background:#25D366;
+    color:white;
+    padding:15px 20px;
+    border-radius:50px;
+    text-decoration:none;
+    font-weight:bold;
+    box-shadow:0 0 10px rgba(0,0,0,0.5);
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+    .box{
+        width:90%;
+        margin:15px auto;
+    }
+
+    .hero h1{
+        font-size:36px;
+    }
+
+    .hero p{
+        font-size:16px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav>
+<h2>T.Classic Lighting</h2>
+</nav>
+
+<!-- HERO SECTION -->
+<section class="hero">
+<h1>Lighting Your World with Style</h1>
+<p>Premium lighting solutions designed for modern homes and businesses.</p>
+<a class="btn" href="#products">Shop Now</a>
+</section>
+
+<!-- PRODUCTS -->
+<section class="products" id="products">
+<h2>Our Lighting Collection</h2>
+
+<div class="box">
+<img src="light1.jpg" alt="Chandelier 1">
+<h3>Nordic ceiling fitting</h3>
+<p>Luxury modern fitting, for palor and rooms.</p>
+</div>
+
+<div class="box">
+<img src="light2.jpg" alt="Ceiling Light 2">
+<h3>Blk/Gld dropping</h3>
+<p>B/G dropping chandelier.</p>
+</div>
+
+<div class="box">
+<img src="light3.jpg" alt="Wall Light 3">
+<h3>Traditional crystal</h3>
+<p>Traditional crystal ceiling fitting .</p>
+</div>
+
+<div class="box">
+<img src="light4.jpg" alt="Pendant Light 4">
+<h3>Wall Light</h3>
+<p>Single eye wall light for every room/palor.</p>
+</div>
+
+<div class="box">
+<img src="light5.jpg" alt="Table Lamp 5">
+<h3>Wall light</h3>
+<p>Double eye wall light.</p>
+</div>
+
+<div class="box">
+<img src="light6.jpg" alt="Floor Lamp 6">
+<h3>Wall light</h3>
+<p>single wall light.</p>
+</div>
+
+<div class="box">
+<img src="light7.jpg" alt="Outdoor Light 7">
+<h3>Outdoor Wall light</h3>
+<p>Outdoor/indoor wall light.</p>
+</div>
+
+<div class="box">
+<img src="light8.jpg" alt="Spot Light 8">
+<h3>Big Dropping</h3>
+<p>Big stepping dropping light.</p>
+</div>
+
+<div class="box">
+<img src="light9.jpg" alt="Wall Sconce 9">
+<h3>Nordic fitting</h3>
+<p>Nordic ceiling fiting for modern homes.</p>
+</div>
+
+<div class="box">
+<img src="light10.jpg" alt="Luxury Chandelier 10">
+<h3>Luxury Chandelier</h3>
+<p>Elegant dropping light suitable for modern dining.</p>
+</div>
+</section>
+
+<!-- ABOUT US -->
+<section class="about" id="about">
+<h2>About Us</h2>
+<p>At T.Classic Lighting, we are dedicated to providing high-quality, stylish lighting solutions for homes and businesses. Our products combine elegance with energy efficiency, helping you light up your world with style.</p>
+</section>
+
+<!-- CONTACT US -->
+<section class="contact" id="contact">
+<h2>Contact Us</h2>
+<p>Have questions or want to place an order? Reach out to us:</p>
+<p>Email: turkishclassic4@gmail.com | Phone: +234 901 645 3771</p>
+<a class="btn" href="https://wa.me/2349016453771" target="_blank">Message Us on WhatsApp</a>
+</section>
+
+<!-- FOOTER -->
+<footer>
+© 2026 T.Classic Lighting | Director: Stanley Chigboogu Chukwuobasi
+</footer>
+
+<!-- WHATSAPP BUTTON -->
+<a class="whatsapp" href="https://wa.me/2349016453771" target="_blank">
+💬 Order Now
+</a>
+
+</body>
+</html>
