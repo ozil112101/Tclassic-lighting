@@ -1,309 +1,360 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="T.Classic Lighting – Premium chandeliers, ceiling fittings, wall lights & more for modern homes and businesses in Nigeria. Luxury lighting with nationwide delivery. Order easily via WhatsApp."/>
-  <title>T.Classic Lighting – Premium Chandeliers & Lighting Solutions Nigeria</title>
-  <!-- Favicon: create a 32x32 or 512x512 light icon and name it favicon.ico -->
-  <link rel="icon" href="favicon.ico" type="image/x-icon"/>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="description" content="T.Classic Lighting – Premium chandeliers and modern lighting solutions in Nigeria."/>
 
-  <style>
-    * { margin:0; padding:0; box-sizing:border-box; }
-    html { scroll-behavior: smooth; }
-    body {
-      font-family: 'Segoe UI', Arial, sans-serif;
-      background: #0f172a;
-      color: #e2e8f0;
-      line-height: 1.6;
-    }
+<title>T.Classic Lighting</title>
 
-    nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1rem 5%;
-      background: #020617;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.5);
-    }
-    nav h2 { color: #00f5ff; font-size: 1.7rem; }
-    .nav-links { display: flex; gap: 2rem; }
-    .nav-links a {
-      color: white;
-      text-decoration: none;
-      font-weight: 600;
-      transition: color 0.3s;
-    }
-    .nav-links a:hover { color: #00f5ff; }
+<link rel="icon" href="favicon.ico"/>
 
-    .hero {
-      min-height: 90vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      padding: 2rem 5%;
-      background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url("light1.jpg") center/cover;
-    }
-    .hero h1 { font-size: clamp(2.5rem, 8vw, 4.5rem); margin-bottom: 1rem; }
-    .hero p { font-size: 1.3rem; max-width: 700px; margin-bottom: 2rem; }
+<style>
 
-    .btn, .order-btn {
-      display: inline-block;
-      background: #00f5ff;
-      color: #0f172a;
-      padding: 0.9rem 2rem;
-      border-radius: 50px;
-      text-decoration: none;
-      font-weight: bold;
-      transition: all 0.3s;
-    }
-    .btn:hover, .order-btn:hover { background: white; transform: translateY(-3px); }
+/* RESET */
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
 
-    section { padding: 5rem 5%; }
-    h2 { text-align: center; color: #00f5ff; font-size: 2.5rem; margin-bottom: 2.5rem; }
+body{
+font-family:'Segoe UI',Arial,sans-serif;
+background:#0f172a;
+color:#e2e8f0;
+line-height:1.6;
+}
 
-    .product-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 2rem;
-      max-width: 1300px;
-      margin: 0 auto;
-    }
-    .box {
-      background: #020617;
-      padding: 1.5rem;
-      border-radius: 16px;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.4);
-      transition: all 0.4s;
-    }
-    .box:hover { transform: translateY(-12px); box-shadow: 0 12px 40px rgba(0,245,255,0.25); }
-    .box img {
-      width: 100%;
-      height: 240px;
-      object-fit: cover;
-      border-radius: 12px;
-      margin-bottom: 1rem;
-      transition: transform 0.4s;
-    }
-    .box:hover img { transform: scale(1.05); }
-    .price { color: #00f5ff; font-size: 1.4rem; font-weight: bold; margin: 0.8rem 0; }
+/* NAVBAR */
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:1rem 5%;
+background:#020617;
+position:sticky;
+top:0;
+z-index:1000;
+box-shadow:0 4px 12px rgba(0,0,0,0.5);
+}
 
-    .about { background: #111827; }
-    .contact { text-align: center; }
+nav h2{color:#00f5ff;}
 
-    .testimonials { background: #0f172a; }
-    .testimonial-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 2rem;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-    .testimonial {
-      background: #1e293b;
-      padding: 2rem;
-      border-radius: 12px;
-      border-left: 5px solid #00f5ff;
-    }
-    .testimonial p { font-style: italic; margin-bottom: 1rem; }
-    .testimonial cite { display: block; text-align: right; font-weight: bold; color: #00f5ff; }
+.nav-links{
+display:flex;
+gap:2rem;
+}
 
-    footer {
-      text-align: center;
-      padding: 2.5rem;
-      background: #020617;
-      border-top: 1px solid #334155;
-    }
+.nav-links a{
+color:white;
+text-decoration:none;
+font-weight:600;
+transition:.3s;
+}
 
-    .whatsapp-float {
-      position: fixed;
-      bottom: 25px;
-      right: 25px;
-      background: #25D366;
-      color: white;
-      width: 65px;
-      height: 65px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 2.3rem;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.5);
-      text-decoration: none;
-      z-index: 999;
-      transition: transform 0.3s;
-    }
-    .whatsapp-float:hover { transform: scale(1.15); }
+.nav-links a:hover,
+.nav-links a.active{
+color:#00f5ff;
+}
 
-    @media (max-width: 768px) {
-      nav { flex-direction: column; gap: 1rem; padding: 1.2rem 5%; }
-      .nav-links { flex-direction: column; gap: 1.2rem; }
-      .hero { min-height: 70vh; padding: 4rem 5% 6rem; }
-      section { padding: 4rem 5%; }
-      h2 { font-size: 2rem; }
-    }
-  </style>
+/* HERO */
+.hero{
+min-height:90vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:2rem 5%;
+background:
+linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7)),
+url("light1.jpg") center/cover;
+}
+
+.hero h1{
+font-size:clamp(2.5rem,8vw,4.5rem);
+margin-bottom:1rem;
+}
+
+.hero p{
+font-size:1.3rem;
+max-width:700px;
+margin-bottom:2rem;
+}
+
+/* BUTTONS */
+.btn,.order-btn{
+display:inline-block;
+background:#00f5ff;
+color:#0f172a;
+padding:.9rem 2rem;
+border-radius:50px;
+text-decoration:none;
+font-weight:bold;
+transition:.3s;
+}
+
+.btn:hover,.order-btn:hover{
+background:white;
+transform:translateY(-3px);
+}
+
+/* SECTIONS */
+section{padding:5rem 5%;}
+
+h2{
+text-align:center;
+color:#00f5ff;
+font-size:2.5rem;
+margin-bottom:2.5rem;
+}
+
+/* PRODUCTS */
+.product-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:2rem;
+max-width:1300px;
+margin:auto;
+}
+
+.box{
+background:#020617;
+padding:1.5rem;
+border-radius:16px;
+box-shadow:0 6px 20px rgba(0,0,0,.4);
+transition:.4s;
+}
+
+.box:hover{
+transform:translateY(-12px);
+box-shadow:0 12px 40px rgba(0,245,255,.25);
+}
+
+.box img{
+width:100%;
+height:240px;
+object-fit:cover;
+border-radius:12px;
+margin-bottom:1rem;
+transition:.4s;
+}
+
+.box:hover img{transform:scale(1.05);}
+
+.price{
+color:#00f5ff;
+font-size:1.4rem;
+font-weight:bold;
+margin:.8rem 0;
+}
+
+/* TESTIMONIALS */
+.testimonials{background:#0f172a;}
+
+.testimonial-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+gap:2rem;
+max-width:1200px;
+margin:auto;
+}
+
+.testimonial{
+background:#1e293b;
+padding:2rem;
+border-radius:12px;
+border-left:5px solid #00f5ff;
+}
+
+/* ABOUT */
+.about{background:#111827;text-align:center;}
+
+/* FOOTER */
+footer{
+text-align:center;
+padding:2.5rem;
+background:#020617;
+border-top:1px solid #334155;
+}
+
+/* WHATSAPP FLOAT */
+.whatsapp-float{
+position:fixed;
+bottom:25px;
+right:25px;
+background:#25D366;
+color:white;
+width:65px;
+height:65px;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:2.3rem;
+text-decoration:none;
+z-index:999;
+transition:.3s;
+}
+
+.whatsapp-float:hover{transform:scale(1.15);}
+
+/* SCROLL ANIMATION */
+.reveal{
+opacity:0;
+transform:translateY(60px);
+transition:all .8s ease;
+}
+
+.reveal.active{
+opacity:1;
+transform:translateY(0);
+}
+
+/* MOBILE */
+@media(max-width:768px){
+nav{flex-direction:column;gap:1rem;}
+.nav-links{flex-direction:column;}
+}
+
+</style>
 </head>
+
 <body>
 
-  <nav aria-label="Main navigation">
-    <h2>T.Classic Lighting</h2>
-    <div class="nav-links">
-      <a href="#">Home</a>
-      <a href="#products">Products</a>
-      <a href="#about">About</a>
-      <a href="#testimonials">Reviews</a>
-      <a href="#contact">Contact</a>
-    </div>
-  </nav>
+<nav>
+<h2>T.Classic Lighting</h2>
+<div class="nav-links">
+<a href="#" class="active">Home</a>
+<a href="#products">Products</a>
+<a href="#about">About</a>
+<a href="#testimonials">Reviews</a>
+<a href="#contact">Contact</a>
+</div>
+</nav>
 
-  <section class="hero">
-    <h1>Illuminate Your Space with Elegance</h1>
-    <p>Premium chandeliers, ceiling fittings & wall lights – designed for luxury homes, offices & hotels across Nigeria.</p>
-    <a class="btn" href="#products">Explore Collection</a>
-  </section>
+<!-- HERO -->
+<section class="hero reveal">
+<h1>Illuminate Your Space with Elegance</h1>
+<p>Premium chandeliers and luxury lighting solutions across Nigeria.</p>
+<a class="btn" href="#products">Explore Collection</a>
+</section>
 
-  <section class="products" id="products">
-    <h2>Our Premium Lighting Collection</h2>
-    <div class="product-grid">
+<!-- PRODUCTS -->
+<section id="products" class="reveal">
+<h2>Our Premium Lighting Collection</h2>
 
-      <div class="box">
-        <img src="light1.jpg" loading="lazy" alt="Luxury Nordic ceiling light fitting for modern living rooms">
-        <h3>Nordic Ceiling Fitting</h3>
-        <p>Modern luxury design – ideal for parlours & bedrooms</p>
-        <p class="price">₦220,000</p>
-        <a class="order-btn" href="https://wa.me/2349016453771?text=Hi%20T.Classic%20Lighting!%20Interested%20in%20Nordic%20Ceiling%20Fitting%20(₦220,000)" target="_blank" rel="noopener">Order Now</a>
-      </div>
+<div class="product-grid">
 
-      <div class="box">
-        <img src="light2.jpg" loading="lazy" alt="Black and gold modern dropping chandelier">
-        <h3>Black/Gold Dropping Chandelier</h3>
-        <p>Elegant dropping style for contemporary spaces</p>
-        <p class="price">₦75,000</p>
-        <a class="order-btn" href="https://wa.me/2349016453771?text=Hi%20T.Classic%20Lighting!%20Interested%20in%20Black-Gold%20Dropping%20Chandelier%20(₦75,000)" target="_blank" rel="noopener">Order Now</a>
-      </div>
-
-      <div class="box">
-        <img src="light3.jpg" loading="lazy" alt="Traditional crystal ceiling fitting luxury">
-        <h3>Traditional Crystal Fitting</h3>
-        <p>Classic crystal design – timeless elegance</p>
-        <p class="price">₦750,000</p>
-        <a class="order-btn" href="https://wa.me/2349016453771?text=Hi%20T.Classic%20Lighting!%20Interested%20in%20Traditional%20Crystal%20Fitting%20(₦750,000)" target="_blank" rel="noopener">Order Now</a>
-      </div>
-
-      <!-- Repeat similar pattern for the remaining 7 products – add loading="lazy" and descriptive alt + better WA text -->
-      <!-- Example for one more: -->
-      <div class="box">
-        <img src="light4.jpg" loading="lazy" alt="Single eye modern wall light for rooms and parlour">
-        <h3>Single Wall Light</h3>
-        <p>Versatile single-eye wall light</p>
-        <p class="price">₦14,000</p>
-        <a class="order-btn" href="https://wa.me/2349016453771?text=Hi%20T.Classic%20Lighting!%20Interested%20in%20Single%20Wall%20Light%20(₦14,000)" target="_blank" rel="noopener">Order Now</a>
-      </div>
-      
-      <div class="box">
-<img src="light5.jpg">
-<h3>Wall light</h3>
-<p>Double eye wall light.</p>
-<p class="price">₦9,500</p>
-<a class="order-btn" href="https://wa.me/2349016453771?text=I%20want%20Table%20Lamp" target="_blank">Order</a>
+<!-- PRODUCT -->
+<div class="box">
+<img src="light1.jpg" loading="lazy">
+<h3>Nordic Ceiling Fitting</h3>
+<p>Modern luxury design</p>
+<p class="price">₦220,000</p>
+<a class="order-btn" href="https://wa.me/2349016453771">Order Now</a>
 </div>
 
-      <div class="box">
-<img src="light6.jpg">
-<h3>Wall light</h3>
-<p>single wall light.</p>
-<p class="price">₦12,000</p>
-<a class="order-btn" href="https://wa.me/2349016453771?text=I%20want%20Floor%20Lamp" target="_blank">Order</a>
+<div class="box">
+<img src="light2.jpg" loading="lazy">
+<h3>Black/Gold Chandelier</h3>
+<p>Elegant dropping style</p>
+<p class="price">₦75,000</p>
+<a class="order-btn" href="https://wa.me/2349016453771">Order Now</a>
 </div>
 
-      <div class="box">
-<img src="light7.jpg">
-<h3>Outdoor Wall light</h3>
-<p>Outdoor/indoor wall light.</p>
-<p class="price">₦17,000</p>
-<a class="order-btn" href="https://wa.me/2349016453771?text=I%20want%20Outdoor%20Lighting" target="_blank">Order</a>
+<div class="box">
+<img src="light3.jpg" loading="lazy">
+<h3>Traditional Crystal</h3>
+<p>Timeless elegance</p>
+<p class="price">₦750,000</p>
+<a class="order-btn" href="https://wa.me/2349016453771">Order Now</a>
 </div>
 
-      <div class="box">
-<img src="light8.jpg">
-<h3>Big Dropping</h3>
-<p>Big dropping light.</p>
-<p class="price">₦200,000</p>
-<a class="order-btn" href="https://wa.me/2349016453771?text=I%20want%20Spot%20Light" target="_blank">Order</a>
+</div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="about reveal">
+<h2>About T.Classic Lighting</h2>
+<p style="max-width:800px;margin:auto;">
+We provide premium lighting solutions blending elegance with modern efficiency for homes and businesses across Nigeria.
+</p>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="testimonials" class="testimonials reveal">
+<h2>What Our Customers Say</h2>
+<div class="testimonial-grid">
+
+<div class="testimonial">
+<p>"Quality lighting and fast delivery!"</p>
+<cite>— Chioma O.</cite>
 </div>
 
-      <div class="box">
-<img src="light9.jpg">
-<h3>Nordic fitting</h3>
-<p>Nordic ceiling fiting for modern homes.</p>
-<p class="price">₦135,000</p>
-<a class="order-btn" href="https://wa.me/2349016453771?text=I%20want%20Wall%20Sconce" target="_blank">Order</a>
+<div class="testimonial">
+<p>"Excellent customer service."</p>
+<cite>— Ahmed K.</cite>
 </div>
 
-
-      <div class="box">
-<img src="light10.jpg">
-<h3>Luxury Chandelier</h3>
-<p>Luxury dropping Chandelier.</p>
-<p class="price">₦120,000</p>
-<a class="order-btn" href="https://wa.me/2349016453771?text=I%20want%20Luxury%20Chandelier" target="_blank">Order</a>
 </div>
-      
-    </div>
-  </section>
+</section>
 
-  <section class="testimonials" id="testimonials">
-    <h2>What Our Customers Say</h2>
-    <div class="testimonial-grid">
-      <div class="testimonial">
-        <p>"The Nordic fitting completely changed the vibe of my living room – elegant and bright! Delivery was super fast."</p>
-        <cite>— Chioma O., Lekki Phase 1</cite>
-      </div>
-      <div class="testimonial">
-        <p>"Bought the luxury chandelier for my new home. Quality is top-notch and customer service was excellent via WhatsApp."</p>
-        <cite>— Ahmed K., Abuja</cite>
-      </div>
-      <div class="testimonial">
-        <p>"Affordable yet premium wall lights. Exactly what I needed for my bedroom. Highly recommend!"</p>
-        <cite>— Fatima A., Port Harcourt</cite>
-      </div>
-      <!-- Add 2–3 more later with real reviews -->
-    </div>
-  </section>
+<!-- CONTACT -->
+<section id="contact" class="reveal" style="text-align:center;">
+<h2>Get in Touch</h2>
+<p>Email: turkishclassic4@gmail.com</p>
+<p>Phone: +234 901 645 3771</p>
 
-  <section class="about" id="about">
-    <h2>About T.Classic Lighting</h2>
-    <p style="max-width: 800px; margin: 0 auto;">
-      We specialize in high-quality, stylish lighting solutions that blend timeless elegance with modern efficiency. From luxury chandeliers to practical wall lights, we help homes, hotels, restaurants and offices across Nigeria shine brighter.
-    </p>
-  </section>
+<a class="btn" href="https://wa.me/2349016453771">
+Chat on WhatsApp
+</a>
+</section>
 
-  <section class="contact" id="contact">
-    <h2>Get in Touch Today</h2>
-    <p><strong>Email:</strong> turkishclassic4@gmail.com</p>
-    <p><strong>Phone / WhatsApp:</strong> +234 901 645 3771</p>
-    <br>
-    <a class="btn" href="https://wa.me/2349016453771?text=Hello%20T.Classic%20Lighting%20team!%20I%20have%20a%20question%20about%20your%20products" target="_blank" rel="noopener">
-      Chat with Us on WhatsApp
-    </a>
-  </section>
+<footer>
+<p>© 2026 T.Classic Lighting<br>
+Director: Stanley Chigboogu Chukwuobasi</p>
+</footer>
 
-  <footer>
-    <p>© 2026 T.Classic Lighting<br>Director: Stanley Chigboogu Chukwuobasi</p>
-  </footer>
+<a class="whatsapp-float" href="https://wa.me/2349016453771">💬</a>
 
-  <a class="whatsapp-float" href="https://wa.me/2349016453771" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
-    💬
-  </a>
+<!-- SCROLL ANIMATION SCRIPT -->
+<script>
+
+/* Reveal Animation */
+const reveals = document.querySelectorAll(".reveal");
+
+window.addEventListener("scroll", () => {
+reveals.forEach(el=>{
+const windowHeight = window.innerHeight;
+const elementTop = el.getBoundingClientRect().top;
+
+if(elementTop < windowHeight - 100){
+el.classList.add("active");
+}
+});
+});
+
+/* Active Navbar Highlight */
+const sections = document.querySelectorAll("section");
+const navLinks = document.querySelectorAll(".nav-links a");
+
+window.addEventListener("scroll", ()=>{
+let current="";
+
+sections.forEach(section=>{
+const sectionTop = section.offsetTop-150;
+if(scrollY >= sectionTop){
+current = section.getAttribute("id");
+}
+});
+
+navLinks.forEach(link=>{
+link.classList.remove("active");
+if(link.getAttribute("href") === "#"+current){
+link.classList.add("active");
+}
+});
+});
+
+</script>
 
 </body>
 </html>
-
-
-
