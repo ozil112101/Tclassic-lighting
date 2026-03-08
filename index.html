@@ -448,10 +448,31 @@ box.style.display=box.classList.contains(category)?"block":"none";
 });
 }
 
+  /* AUTO PRODUCT GENERATOR */
+
+const productGrid = document.getElementById("productGrid");
+
+for (let i = 1; i <= 44; i++) {
+
+let product = document.createElement("div");
+product.className = "box";
+
+product.innerHTML = `
+<img src="light${String(i).padStart(2,'0')}.jpg" loading="lazy">
+<h3>Premium Lighting ${i}</h3>
+<p>Elegant modern lighting for homes and interiors.</p>
+<p class="price">Contact for Price</p>
+<a class="order-btn" href="https://wa.me/2349016453771?text=I%20want%20light${i}">Order Now</a>
+`;
+
+productGrid.appendChild(product);
+
+}
 </script>
 
 </body>
 </html>
+
 
 
 
